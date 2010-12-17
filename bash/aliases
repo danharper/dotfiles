@@ -5,6 +5,16 @@ alias lso="ls -AF1"
 alias lsl="ls -AFhl"
 alias unixtime="date +%s"
 
+# Git aliases
+alias gst="git status"
+alias gb="git branch"
+alias ga="git add"
+alias gc="git commit -v"
+alias gps="git push"
+alias gpl="git pull"
+alias gd="git diff | mate"
+alias gk="gitk --all"
+
 # Create dir and move into it
 function take() {
 	mkdir $1
