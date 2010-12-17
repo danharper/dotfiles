@@ -8,6 +8,7 @@ alias unixtime="date +%s"
 # Git aliases
 alias gst="git status"
 alias gb="git branch"
+alias gco="git checkout"
 alias ga="git add"
 alias gc="git commit -v"
 alias gps="git push"
