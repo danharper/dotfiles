@@ -6,7 +6,7 @@ alias lsl="ls -AFhl"
 alias unixtime="date +%s"
 
 # Git aliases
-alias gst="git status"
+alias gs="git status"
 alias gb="git branch"
 alias gco="git checkout"
 alias ga="git add"
