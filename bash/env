@@ -1,4 +1,4 @@
-export EDITOR="mate -w"
+export EDITOR="mvim -f"
 export PATH=$PATH:~/.bin
 
 # Ruby Version Manager

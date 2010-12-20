@@ -43,4 +43,4 @@ alias resetip="sudo ipconfig set en1 BOOTP; sudo ipconfig set en1 DHCP"
 
 # Re-load aliases
 alias reload="source ~/.bin/dotfiles/bash/aliases"
-alias ea="mate -w ~/.bin/dotfiles/bash/aliases && reload"
+alias ea="mvim -f ~/.bin/dotfiles/bash/aliases && reload"
