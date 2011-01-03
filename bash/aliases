@@ -16,12 +16,17 @@ alias gpl="git pull"
 alias gd="git diff | mate"
 alias gk="gitk --all"
 
+# nanoc aliases
+alias na="nanoc aco"
+alias nc="nanoc co"
+
 # Create dir and move into it
 function take() { mkdir $1; cd $1; }
 
 # Shortcut to directories
 alias ht="cd /Applications/XAMPP/htdocs"
 alias hm="cd ~"
+alias site="ht; cd danharper-nanoc/"
 
 # Start/stop XAMPP
 alias xampp="sudo /Applications/XAMPP/xamppfiles/xampp start"
