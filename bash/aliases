@@ -49,3 +49,7 @@ alias resetip="sudo ipconfig set en1 BOOTP; sudo ipconfig set en1 DHCP"
 # Re-load aliases
 alias reload="source ~/.bin/dotfiles/bash/aliases"
 alias ea="mvim -f ~/.bin/dotfiles/bash/aliases && reload"
+
+# Hide/show desktop icons
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false; killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true; killall Finder"
