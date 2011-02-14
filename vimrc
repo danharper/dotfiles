@@ -88,3 +88,6 @@ nmap <leader>bv :bel vsp
 
 " Save when losing focus
 "au FocusLost * :wa
+
+" Hide MacVim toolbar by default
+set go-=T
