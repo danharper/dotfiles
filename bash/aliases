@@ -15,6 +15,7 @@ alias unixtime="date +%s"
 alias ht="cd /Applications/XAMPP/htdocs"
 alias hm="cd ~"
 alias site="ht; cd danharper-nanoc/"
+alias dot="cd ~/.bin/dotfiles/"
 
 # Re-load aliases
 alias reload="source ~/.bashrc"
