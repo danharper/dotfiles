@@ -67,10 +67,8 @@ nmap <leader>nt :NERDTreeToggle <CR>
 let NERDTreeShowHidden=1
 
 " Auto change directory to that of file in the buffer
-autocmd BufEnter * cd %:p:h
-
-" Change ZenCoding plugin key to Ctrl+E (was Ctrl-Y + ,)
-let g:user_zen_leader_key = '<C-e>'
+" Interferes with PeepOpen
+"autocmd BufEnter * cd %:p:h
 
 " Delete previous word with Ctrl+Backspace
 imap <C-BS> <c-w>
