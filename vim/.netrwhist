@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/danharper/.bin/dotfiles'
-let g:netrw_dirhist_2='/Applications/XAMPP/xamppfiles/htdocs/danharper-nanoc'
-let g:netrw_dirhist_3='/Applications/XAMPP/xamppfiles/htdocs/ratemyplacement'
-let g:netrw_dirhist_4='/Applications/XAMPP/xamppfiles/htdocs/oopjs/lesson4'
-let g:netrw_dirhist_5='/Users/danharper/Code/node/express-first'
