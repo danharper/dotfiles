@@ -1,4 +1,4 @@
-set nocompatible " Vim, not Vi. Must be at top
+set nocompatible " Vim, not Vi. 
 
 " Disable arrow keys *shock* *horror*!
 "inoremap  <Up>     <NOP>
@@ -11,7 +11,7 @@ set nocompatible " Vim, not Vi. Must be at top
 "noremap   <Right>  <NOP>
 
 syntax on
-colorscheme molokai 
+colorscheme rdark
 
 set nobackup
 set ruler
@@ -20,7 +20,7 @@ set number
 set incsearch " Search for text as you enter it
 set tabstop=2
 set shiftwidth=2
-set guifont=Monaco:h12
+set guifont=M+\ 1m:h11
 set smartindent
 set autoindent
 set splitbelow " Split windows below current window
