@@ -1,9 +1,20 @@
-# Easy navigation & listing
+# Easier navigation
 alias ..="cd .."
-alias lsa="ls -AF"
-alias lso="ls -AF1"
-alias lsl="ls -AFhl"
+alias ls="ls -F"
+alias la="ls -AF"
+alias lo="ls -AF1"
+alias ll="ls -AFhl"
+
 alias unixtime="date +%s"
+
+# Shortcut to directories
+alias ht="cd /Applications/XAMPP/htdocs"
+alias hm="cd ~"
+alias site="ht; cd danharper-nanoc/"
+
+# Re-load aliases
+alias reload="source ~/.bashrc"
+alias ea="mvim -f ~/.bin/dotfiles/bash/aliases && reload"
 
 # Git aliases
 alias gs="git status"
@@ -22,11 +33,7 @@ alias nc="nanoc co"
 
 # Create dir and move into it
 function take() { mkdir $1; cd $1; }
-
-# Shortcut to directories
-alias ht="cd /Applications/XAMPP/htdocs"
-alias hm="cd ~"
-alias site="ht; cd danharper-nanoc/"
+alias tk="take"
 
 # Start/stop XAMPP
 alias xampp="sudo /Applications/XAMPP/xamppfiles/xampp start"
@@ -45,10 +52,6 @@ alias hidehidden="defaults write com.apple.finder AppleShowAllFiles FALSE; killa
 
 # Restart wireless
 alias resetip="sudo ipconfig set en1 BOOTP; sudo ipconfig set en1 DHCP"
-
-# Re-load aliases
-alias reload="source ~/.bin/dotfiles/bash/aliases"
-alias ea="mvim -f ~/.bin/dotfiles/bash/aliases && reload"
 
 # Hide/show desktop icons
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false; killall Finder"
