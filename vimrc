@@ -13,6 +13,9 @@ set nocompatible " Vim, not Vi.
 syntax on
 colorscheme rdark
 
+" Use pathogen to manage plugins
+call pathogen#runtime_append_all_bundles()
+
 set nobackup
 set ruler
 set number
@@ -29,6 +32,12 @@ set nohls " Turn off search highlighting
 set foldenable
 set ignorecase " Case insensitive
 set smartcase " All lower case string = case-insenstive; any uppercase chars = case-senstive
+:filetype plugin on " Required for snipMate
+
+" EnhancedCommentify script options
+let g:EnhCommentifyRespectIndent = 'Yes'
+let g:EnhCommentifyPretty = 'Yes'
+let g:EnhCommentifyUseSyntax = 'Yes'
 
 " Command auto-complete
 set wildmenu
