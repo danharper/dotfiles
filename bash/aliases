@@ -5,6 +5,10 @@ alias la="ls -AF"
 alias lo="ls -AF1"
 alias ll="ls -AFhl"
 
+# Editor aliases 
+alias m="mate"
+alias v="mvim"
+
 alias unixtime="date +%s"
 
 # Shortcut to directories

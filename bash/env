@@ -1,6 +1,6 @@
 export EDITOR="mvim -f"
 export PATH=$PATH:~/.bin
-export PATH="${PATH}:/usr/local/lib/node"
+export PATH=$PATH:/usr/local/lib/node
 
 # Ruby Version Manager
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
