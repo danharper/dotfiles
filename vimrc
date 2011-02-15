@@ -1,14 +1,18 @@
 set nocompatible " Vim, not Vi. 
 
 " Disable arrow keys *shock* *horror*!
-"inoremap  <Up>     <NOP>
-"inoremap  <Down>   <NOP>
-"inoremap  <Left>   <NOP>
-"inoremap  <Right>  <NOP>
-"noremap   <Up>     <NOP>
-"noremap   <Down>   <NOP>
-"noremap   <Left>   <NOP>
-"noremap   <Right>  <NOP>
+"inoremap  <up>     <nop>
+"inoremap  <down>   <nop>
+"inoremap  <left>   <nop>
+"inoremap  <right>  <nop>
+"noremap   <up>     <nop>
+"noremap   <down>   <nop>
+"noremap   <left>   <nop>
+"noremap   <right>  <nop>
+
+" Make j and k work by screen line, not file line
+nnoremap j gj
+nnoremap k gk
 
 syntax on
 colorscheme rdark
@@ -19,7 +23,7 @@ call pathogen#runtime_append_all_bundles()
 set nobackup
 set ruler
 set number
-"set relativenumber " Line numbers relative to your position
+set relativenumber " Line numbers relative to your position
 set incsearch " Search for text as you enter it
 set tabstop=2
 set shiftwidth=2
@@ -33,6 +37,10 @@ set foldenable
 set ignorecase " Case insensitive
 set smartcase " All lower case string = case-insenstive; any uppercase chars = case-senstive
 :filetype plugin on " Required for snipMate
+
+" Persistent undo - put them in ~/.undo to keep dirs clean
+set undofile
+set undodir=~/.undo
 
 " EnhancedCommentify script options
 let g:EnhCommentifyRespectIndent = 'Yes'
@@ -86,12 +94,12 @@ imap <C-BS> <c-w>
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
 " Map jj to Esc to exit out of Insert mode easier 
-inoremap jj <ESC>
+"inoremap jj <ESC>
 
 nmap <leader>bv :bel vsp 
 
 " Save when losing focus
-"au FocusLost * :wa
+au FocusLost * :wa
 
 " Hide MacVim toolbar by default
 set go-=T
