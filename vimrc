@@ -43,6 +43,12 @@ let g:EnhCommentifyUseSyntax = 'Yes'
 set wildmenu
 set wildmode=list:longest " File/dir autocomplete
 
+" Code completion
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
 " Set , as leader
 let mapleader = ","
 
