@@ -1,6 +1,7 @@
 # Easier navigation
 alias ..="cd .."
 alias ls="ls -F"
+alias l="ls"
 alias la="ls -AF"
 alias lo="ls -AF1"
 alias ll="ls -AFhl"
