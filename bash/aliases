@@ -8,7 +8,9 @@ alias ll="ls -AFhl"
 
 # Editor aliases 
 alias m="mate"
+alias m.="mate ."
 alias v="mvim"
+alias v.="mvim ."
 
 alias unixtime="date +%s"
 
