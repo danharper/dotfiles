@@ -20,7 +20,6 @@ colorscheme rdark
 " Use pathogen to manage plugins
 call pathogen#runtime_append_all_bundles()
 
-set nobackup
 set ruler
 set number
 set relativenumber " Line numbers relative to your position
@@ -38,9 +37,11 @@ set ignorecase " Case insensitive
 set smartcase " All lower case string = case-insenstive; any uppercase chars = case-senstive
 :filetype plugin on " Required for snipMate
 
-" Persistent undo - put them in ~/.undo to keep dirs clean
+" Persistent undo, swap file directory and no backup files
+set nobackup
 set undofile
-set undodir=~/.undo
+set undodir=~/.bin/dotfiles/vim/tmp/undo
+set directory=~/.bin/dotfiles/vim/tmp/swap
 
 " EnhancedCommentify script options
 let g:EnhCommentifyRespectIndent = 'Yes'
