@@ -110,3 +110,6 @@ au FocusLost * :wa
 
 " Hide MacVim toolbar by default
 set go-=T
+
+" .less CSS styling
+au BufNewFile,BufRead *.less set filetype=less
