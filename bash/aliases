@@ -32,7 +32,7 @@ alias ga="git add"
 alias gc="git commit -v"
 alias gps="git push"
 alias gpl="git pull"
-alias gd="git diff | mate"
+alias gd='git diff | mvim -R -f -'
 alias gk="gitk --all"
 
 # nanoc aliases

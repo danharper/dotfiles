@@ -88,7 +88,7 @@ let NERDTreeShowHidden=1
 "autocmd BufEnter * cd %:p:h
 
 " Change splits easier with ,w
-nmap <leader>w <C-W> <C-W>
+nmap <leader>w <C-W><C-W>
 
 " Delete previous word with Ctrl+Backspace
 imap <C-BS> <c-w>
