@@ -21,8 +21,9 @@ colorscheme rdark
 call pathogen#runtime_append_all_bundles()
 
 set ruler
-set number
+"set number
 set relativenumber " Line numbers relative to your position
+"set cursorline
 set incsearch " Search for text as you enter it
 set tabstop=2
 set shiftwidth=2
@@ -75,8 +76,9 @@ if has("autocmd")
 	autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
-" Map ,nt to NERDTreeToggle
+" Map ,nt and ,q to NERDTreeToggle
 nmap <leader>nt :NERDTreeToggle <CR>
+nmap <leader>q :NERDTreeToggle <CR>
 
 " Show hidden files in NERDTree
 let NERDTreeShowHidden=1
@@ -84,6 +86,9 @@ let NERDTreeShowHidden=1
 " Auto change directory to that of file in the buffer
 " Interferes with PeepOpen
 "autocmd BufEnter * cd %:p:h
+
+" Change splits easier with ,w
+nmap <leader>w <C-W> <C-W>
 
 " Delete previous word with Ctrl+Backspace
 imap <C-BS> <c-w>
@@ -98,6 +103,7 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 "inoremap jj <ESC>
 
 nmap <leader>bv :bel vsp 
+cmap bv bel vsp
 
 " Save when losing focus
 au FocusLost * :wa
