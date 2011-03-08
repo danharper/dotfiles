@@ -80,8 +80,9 @@ endif
 nmap <leader>nt :NERDTreeToggle <CR>
 nmap <leader>q :NERDTreeToggle <CR>
 
-" Show hidden files in NERDTree
+" Show hidden files in NERDTree (except .DS_Store)
 let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.DS_Store$']
 
 " Auto change directory to that of file in the buffer
 " Interferes with PeepOpen
