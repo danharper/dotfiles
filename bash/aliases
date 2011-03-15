@@ -15,7 +15,7 @@ alias v.="mvim ."
 alias unixtime="date +%s"
 
 # Shortcut to directories
-alias ht="cd /Applications/XAMPP/htdocs"
+alias ht="cd ~/Sites/"
 alias hm="cd ~"
 alias site="ht; cd danharper-nanoc/"
 alias dot="cd ~/.bin/dotfiles/"
@@ -45,8 +45,8 @@ function take() { mkdir $1; cd $1; }
 alias tk="take"
 
 # Start/stop XAMPP
-alias xampp="sudo /Applications/XAMPP/xamppfiles/xampp start"
-alias xampp-stop="sudo /Applications/XAMPP/xamppfiles/xampp stop"
+# alias xampp="sudo /Applications/XAMPP/xamppfiles/xampp start"
+# alias xampp-stop="sudo /Applications/XAMPP/xamppfiles/xampp stop"
 
 # Launch MySQL terminal
 alias mysql="/usr/local/mysql/bin/mysql -u root"
