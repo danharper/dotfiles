@@ -17,7 +17,7 @@ alias unixtime="date +%s"
 # Shortcut to directories
 alias ht="cd ~/Sites/"
 alias hm="cd ~"
-alias site="ht; cd danharper-nanoc/"
+alias site="cd ~/Ruby/danharper.me/"
 alias dot="cd ~/.bin/dotfiles/"
 
 # Re-load aliases
