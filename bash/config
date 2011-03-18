@@ -40,4 +40,4 @@ BWHITE='\e[47m'
 
 #PS1="\n\u:\w \[$EGREEN\]\$(vcprompt)\[$NO_COLOR\] \n→ "
 #PS1="\w \[$UGREEN\]\$(vcprompt --format \"%s:%b\")\[$NO_COLOR\] \[$EYELLOW\]\$(vcprompt --format \"%m%u\")\[$NO_COLOR\] → "
-PS1="\w \[$EWHITE\]\$(vcprompt --format \"[%s:%b]\[$EGREEN\]%u\[$ECYAN\]%m \")\[$NO_COLOR\]→ "
+PS1="\w \[$EBLACK\]\$(vcprompt --format \"[%s:%b]\[$EGREEN\]%u\[$ECYAN\]%m \")\[$NO_COLOR\]→ "
