@@ -2,6 +2,9 @@ export EDITOR='mvim -f --nomru -c"au VimLeave * !open -a Terminal"'
 export PATH=$PATH:~/.bin
 export PATH=$PATH:/usr/local/lib/node
 
+# Jumplist
+source ~/.jumplist-driver
+
 # Ruby Version Manager
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 

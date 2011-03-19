@@ -3,6 +3,7 @@ alias ..="cd .."
 alias ls="ls -F"
 alias l="ls"
 alias la="ls -AF"
+alias a="la"
 alias lo="ls -AF1"
 alias ll="ls -AFhl"
 
@@ -39,6 +40,13 @@ alias gk="gitk --all"
 # nanoc aliases
 alias na="nanoc aco"
 alias nc="nanoc co"
+
+# Jumplist aliases
+alias j="jump"
+alias jl="jump list"
+alias ja="jump add"
+alias jd="jump delete"
+alias jumplist="jump list"
 
 # Create dir and move into it
 function take() { mkdir $1; cd $1; }
