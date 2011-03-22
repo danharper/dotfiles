@@ -25,6 +25,7 @@ alias dot="cd ~/.bin/dotfiles/"
 # Re-load aliases
 alias reload="source ~/.bashrc"
 alias ea="mvim -f ~/.bin/dotfiles/bash/aliases && reload"
+alias vimrc="mvim ~/.bin/dotfiles/vimrc"
 
 # Git aliases
 alias gs="git status"

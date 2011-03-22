@@ -1,4 +1,4 @@
-set nocompatible " Vim, not Vi. 
+set nocompatible " Vim, not Vi.
 
 " Disable arrow keys *shock* *horror*!
 "inoremap  <up>     <nop>
@@ -114,3 +114,6 @@ set go-=T
 
 " .less CSS styling
 au BufNewFile,BufRead *.less set filetype=less
+
+" Write with sudo
+cmap w!! %!sudo tee > /dev/null %
