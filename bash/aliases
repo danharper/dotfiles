@@ -58,7 +58,8 @@ alias tk="take"
 # alias xampp="sudo /Applications/XAMPP/xamppfiles/xampp start"
 # alias xampp-stop="sudo /Applications/XAMPP/xamppfiles/xampp stop"
 
-# Restart built-in Apache
+# Apache
+alias apache="sudo /usr/sbin/apachectl"
 alias a2r="sudo /usr/sbin/apachectl restart"
 
 # Launch MySQL terminal

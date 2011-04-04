@@ -15,7 +15,9 @@ nnoremap j gj
 nnoremap k gk
 
 syntax on
-colorscheme rdark
+" colorscheme rdark
+set background=light
+colorscheme solarized
 
 " Use pathogen to manage plugins
 call pathogen#runtime_append_all_bundles()
@@ -27,6 +29,7 @@ set relativenumber " Line numbers relative to your position
 set incsearch " Search for text as you enter it
 set tabstop=2
 set shiftwidth=2
+" set expandtab
 set guifont=M+\ 1m:h11
 set smartindent
 set autoindent
@@ -117,3 +120,6 @@ au BufNewFile,BufRead *.less set filetype=less
 
 " Write with sudo
 cmap w!! %!sudo tee > /dev/null %
+
+" Change pwd to that of current file
+cmap acd cd %:p:h
