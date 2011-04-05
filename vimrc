@@ -107,7 +107,7 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 "inoremap jj <ESC>
 
 nmap <leader>bv :bel vsp 
-cmap bv bel vsp
+cmap bv bel vsp 
 
 " Save when losing focus
 au FocusLost * :wa
