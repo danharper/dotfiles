@@ -2,6 +2,9 @@ export EDITOR='mvim -f --nomru -c"au VimLeave * !open -a Terminal"'
 export PATH=$PATH:~/.bin
 export PATH=$PATH:/usr/local/lib/node
 
+# Vi mode in my Terminal? YES FUCKING PLEASE!!
+set -o vi
+
 # Jumplist
 source ~/.jumplist-driver
 
