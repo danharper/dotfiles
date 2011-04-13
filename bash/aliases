@@ -41,6 +41,8 @@ alias gps="git push"
 alias gpl="git pull"
 alias gd='git diff | mvim -R -f -'
 alias gk="gitk --all"
+alias gl="git log"
+alias glo="git log --oneline"
 
 # nanoc aliases
 alias na="nanoc aco"
