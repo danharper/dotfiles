@@ -1,6 +1,9 @@
 # Easier navigation
 alias ..="cd .."
 alias ...="cd ../.."
+alias bk="cd -"
+
+# Improved listing
 alias ls="ls -F"
 alias l="ls"
 alias la="ls -AF"
@@ -16,13 +19,13 @@ alias v.="mvim ."
 
 alias unixtime="date +%s"
 
-# Shortcut to directories
+# Important directory shortcuts
 alias ht="cd /Library/WebServer/Sites/"
 alias hm="cd ~"
 alias site="cd ~/Ruby/danharper.me/"
 alias dot="cd ~/.bin/dotfiles/"
 
-# Re-load aliases
+# bashrc & vimrc
 alias reload="source ~/.bashrc"
 alias ea="mvim -f ~/.bin/dotfiles/bash/aliases && reload"
 alias vimrc="mvim ~/.bin/dotfiles/vimrc"
@@ -44,30 +47,33 @@ alias na="nanoc aco"
 alias nc="nanoc co"
 
 # Jumplist aliases
-alias j="jump"
 alias jl="jump list"
 alias ja="jump add"
 alias jd="jump delete"
-alias jumplist="jump list"
+function j() {
+	if [ $# -eq 0 ]; then
+		jump list
+	else
+		jump $@
+	fi
+}
 
-# Create dir and move into it
+# mkdir and cd into it
 function take() { mkdir $1; cd $1; }
 alias tk="take"
-
-# Start/stop XAMPP
-# alias xampp="sudo /Applications/XAMPP/xamppfiles/xampp start"
-# alias xampp-stop="sudo /Applications/XAMPP/xamppfiles/xampp stop"
 
 # Apache
 alias apache="sudo /usr/sbin/apachectl"
 alias a2r="sudo /usr/sbin/apachectl restart"
 
-# Launch MySQL terminal
-alias mysql="/usr/local/mysql/bin/mysql -u root"
-
-# Start/stop MySQL server
-alias mysql-start="sudo /usr/local/mysql/support-files/mysql.server start"
-alias mysql-stop="sudo /usr/local/mysql/support-files/mysql.server stop"
+# MySQL
+function mysql() {
+	if [ $# -eq 0 ]; then
+		/usr/local/mysql/bin/mysql -u root
+	else
+		sudo /usr/local/mysql/support-files/mysql.server $@
+	fi
+}
 
 # Toggle hidden files in Finder
 alias showhidden="defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder"
