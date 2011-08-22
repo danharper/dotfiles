@@ -27,8 +27,10 @@ set ruler
 set relativenumber " Line numbers relative to your position
 "set cursorline
 set incsearch " Search for text as you enter it
-set tabstop=2
-set shiftwidth=2
+" set tabstop=2
+" set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 " set expandtab
 set guifont=M+\ 1m:h11
 set smartindent

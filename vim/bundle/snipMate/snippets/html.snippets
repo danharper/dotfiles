@@ -270,8 +270,8 @@ snippet 5bp IE6 PNG Fix
 		<script>DD_belatedPNG.fix('img, .png_bg');</script>
 	<![endif]-->
 snippet jquery jQuery CDN & Fallback
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.js"></script>
-	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.4.4.js"%3E%3C/script%3E'))</script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.6.2.min.js"%3E%3C/script%3E'))</script>
 snippet jquery jQuery Document Ready
 	\$(function() {
 		${0}
@@ -284,3 +284,13 @@ snippet nt-img Tuts+ Image Block
 	<div class="tutorial_image"><img src="images/${1}.${2:png}" border="0"></div>${3}
 snippet nt-cd Code Block
 	<code>${1}</code>
+snippet nt-roundup Roundup Block
+	<ul class="webroundup">
+		${1}
+	</ul>
+snippet nt-li Roundup Item
+	<li>
+		<div><img src="images/${1}.jpg" width="165" border="0"></div>
+		<h4><a href="${2}">${3}</a></h4>
+		<p>${4}</p>${5}
+	</li>
