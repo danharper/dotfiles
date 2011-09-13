@@ -1,17 +1,4 @@
-# Easier navigation
-alias ..="cd .."
-alias ...="cd ../.."
-alias bk="cd -"
-
-alias bitcoin="/Applications/Bitcoin.app/Contents/MacOS/bitcoin -addnode=69.164.218.197 -addnode=64.22.103.150 -addnode=173.242.112.53 -addnode=178.79.147.99 -addnode=184.106.111.41 -addnode=91.85.220.84 -addnode=173.224.125.222"
-
-# Improved listing
-alias ls="ls -F"
-alias l="ls"
-alias la="ls -AF"
-alias a="la"
-alias lo="ls -AF1"
-alias ll="ls -AFhl"
+. ./aliases.travel
 
 # Editor aliases 
 alias m="mate"
@@ -33,30 +20,6 @@ alias ea="mvim -f ~/.bin/dotfiles/bash/aliases && reload"
 alias vimrc="mvim ~/.bin/dotfiles/vimrc"
 alias hosts="sudo mvim /etc/hosts"
 
-# Git aliases
-function git_current_branch() {
-	git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///'
-}
-alias gs="git status"
-alias g="git status"
-alias gb="git branch"
-alias gco="git checkout"
-alias ga="git add"
-alias gc="git commit -v"
-alias gm="git merge --no-ff"
-alias grb='git rebase -p'
-# alias gps="git push"
-alias gpsall='git push'
-alias gps='git push origin HEAD:$(git_current_branch)'
-# alias gpl="git pull"
-alias gpl="git pull --rebase"
-alias gup='git fetch origin && grb origin/$(git_current_branch)' # gup instead of gpl
-
-alias gd='git diff | mvim -R -f -'
-alias gk="gitk --all"
-alias gl="git log"
-alias glo="git log --oneline"
-
 # nanoc aliases
 alias na="nanoc aco"
 alias nc="nanoc co"
@@ -72,10 +35,6 @@ function j() {
 		jump $@
 	fi
 }
-
-# mkdir and cd into it
-function take() { mkdir $1; cd $1; }
-alias tk="take"
 
 # Apache
 alias apache="sudo /usr/sbin/apachectl"
@@ -110,3 +69,6 @@ alias hidelibrary="chflags hidden ~/Library/"
 
 # Fix VirtualBox Error
 alias fixvirtualbox="sudo /Library/StartupItems/VirtualBox/VirtualBox restart"
+
+# BitCoin client connections
+alias bitcoin="/Applications/Bitcoin.app/Contents/MacOS/bitcoin -addnode=69.164.218.197 -addnode=64.22.103.150 -addnode=173.242.112.53 -addnode=178.79.147.99 -addnode=184.106.111.41 -addnode=91.85.220.84 -addnode=173.224.125.222"
