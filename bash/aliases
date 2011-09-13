@@ -1,4 +1,4 @@
-. ./aliases.travel
+. ~/.bin/dotfiles/bash/aliases.travel
 
 # Editor aliases 
 alias m="mate"
