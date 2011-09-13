@@ -16,7 +16,8 @@ nnoremap k gk
 
 syntax on
 " colorscheme rdark
-set background=light
+" set background=dark
+set background=dark
 colorscheme solarized
 
 " Use pathogen to manage plugins
@@ -53,6 +54,10 @@ set directory=~/.bin/dotfiles/vim/tmp/swap
 let g:EnhCommentifyRespectIndent = 'Yes'
 let g:EnhCommentifyPretty = 'Yes'
 let g:EnhCommentifyUseSyntax = 'Yes'
+
+" Indent Guides options
+let g:indent_guides_color_change_percent = 4 " default 10
+let g:indent_guides_start_level = 2 " default 1
 
 " Command auto-complete
 set wildmenu
