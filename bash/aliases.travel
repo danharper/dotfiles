@@ -18,7 +18,7 @@ function git_current_branch() {
 	git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///'
 }
 alias gs="git status"
-alias g="git status"
+alias g="git status -sb"
 alias gb="git branch"
 alias gco="git checkout"
 alias ga="git add"
