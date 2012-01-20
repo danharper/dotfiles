@@ -5,6 +5,8 @@ alias m="mate"
 alias m.="mate ."
 alias v="mvim"
 alias v.="mvim ."
+alias s="subl"
+alias s.="subl ."
 
 alias unixtime="date +%s"
 

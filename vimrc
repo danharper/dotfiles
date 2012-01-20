@@ -15,16 +15,16 @@ nnoremap j gj
 nnoremap k gk
 
 syntax on
-" colorscheme rdark
-" set background=dark
 set background=dark
-colorscheme solarized
+" set background=light
+" colorscheme solarized
+colorscheme molokai
 
 " Use pathogen to manage plugins
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 set ruler
-"set number
+" set number
 set relativenumber " Line numbers relative to your position
 "set cursorline
 set incsearch " Search for text as you enter it
@@ -33,7 +33,7 @@ set incsearch " Search for text as you enter it
 set tabstop=4
 set shiftwidth=4
 " set expandtab
-set guifont=M+\ 1m:h11
+set guifont=Consolas:h12
 set smartindent
 set autoindent
 set splitbelow " Split windows below current window
