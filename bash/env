@@ -1,4 +1,4 @@
-export EDITOR='mvim -f --nomru -c"au VimLeave * !open -a Terminal"'
+export EDITOR='subl -n -w'
 export PATH=$PATH:~/.bin
 export PATH=$PATH:/usr/local/lib/node
 

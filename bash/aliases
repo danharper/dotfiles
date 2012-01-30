@@ -29,11 +29,11 @@ alias gps='git push origin HEAD:$(git_current_branch)'
 # alias gpl="git pull"
 alias gpl="git pull --rebase"
 alias gup='git fetch origin && grb origin/$(git_current_branch)' # gup instead of gpl
-alias gd='git diff | mvim -R -f -'
+alias gd='git diff | subl -n'
 alias gk="gitk --all"
 alias gl="git log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'"
 alias glo="git log --oneline"
-function gblame() { git blame $1 | mvim -R -f -; }
+function gblame() { git blame $1 | subl -n -w; }
 
 # mkdir and cd into it
 function take() { mkdir $1; cd $1; }
@@ -57,9 +57,9 @@ alias dot="cd ~/.bin/dotfiles/"
 
 # bashrc & vimrc
 alias reload="source ~/.bashrc"
-alias ea="mvim -f ~/.bin/dotfiles/bash/aliases && reload"
+alias ea="subl -n -w ~/.bin/dotfiles/bash/aliases && reload"
+alias hosts="sudo subl -n /etc/hosts"
 alias vimrc="mvim ~/.bin/dotfiles/vimrc"
-alias hosts="sudo mvim /etc/hosts"
 
 # nanoc aliases
 alias na="nanoc aco"
