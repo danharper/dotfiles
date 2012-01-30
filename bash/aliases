@@ -1,4 +1,43 @@
-. ~/.bin/dotfiles/bash/aliases.travel
+# Easier navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias bk="cd -"
+
+# Improved listing
+alias ls="ls -F"
+alias l="ls"
+alias la="ls -AF"
+alias a="la"
+alias lo="ls -AF1"
+alias ll="ls -AFhl"
+
+# Git aliases
+function git_current_branch() {
+	git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///'
+}
+alias gs="git status"
+alias g="git status -sb"
+alias gb="git branch"
+alias gco="git checkout"
+alias ga="git add"
+alias gc="git commit -v"
+alias gm="git merge --no-ff"
+alias grb='git rebase -p'
+# alias gps="git push"
+alias gpsall='git push'
+alias gps='git push origin HEAD:$(git_current_branch)'
+# alias gpl="git pull"
+alias gpl="git pull --rebase"
+alias gup='git fetch origin && grb origin/$(git_current_branch)' # gup instead of gpl
+alias gd='git diff | mvim -R -f -'
+alias gk="gitk --all"
+alias gl="git log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'"
+alias glo="git log --oneline"
+function gblame() { git blame $1 | mvim -R -f -; }
+
+# mkdir and cd into it
+function take() { mkdir $1; cd $1; }
+alias tk="take"
 
 # Editor aliases 
 alias m="mate"
