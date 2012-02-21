@@ -113,3 +113,6 @@ alias fixvirtualbox="sudo /Library/StartupItems/VirtualBox/VirtualBox restart"
 
 # BitCoin client connections
 alias bitcoin="/Applications/Bitcoin.app/Contents/MacOS/bitcoin -addnode=69.164.218.197 -addnode=64.22.103.150 -addnode=173.242.112.53 -addnode=178.79.147.99 -addnode=184.106.111.41 -addnode=91.85.220.84 -addnode=173.224.125.222"
+
+# Tail Today's FuelPHP App Log
+alias fuellog="tail -f fuel/app/logs/"`eval date +%Y`"/"`eval date +%m`"/"`eval date +%d`".php"
