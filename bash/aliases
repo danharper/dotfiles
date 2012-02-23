@@ -26,6 +26,7 @@ alias grb='git rebase -p'
 # alias gps="git push"
 alias gpsall='git push'
 alias gps='git push origin HEAD:$(git_current_branch)'
+alias gfog='git push fog HEAD:master'
 # alias gpl="git pull"
 alias gpl="git pull --rebase"
 alias gup='git fetch origin && grb origin/$(git_current_branch)' # gup instead of gpl
