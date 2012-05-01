@@ -46,3 +46,4 @@ BWHITE='\e[47m'
 # PS1="\w \[$EBLACK\]\$(vcprompt --format \"[%s:%b]\[$EGREEN\]%u\[$ECYAN\]%m \")\[$NO_COLOR\]→ "
 # PS1="\w \[$BLUE\][$(git_current_branch)]\[$NO_COLOR\]→ "
 PS1="\w → "
+PS1="\[\033[G\]$PS1"
