@@ -11,6 +11,9 @@ alias a="la"
 alias lo="ls -AF1"
 alias ll="ls -AFhl"
 
+# Build InventoryBase from develop branch and deploy that shit
+alias dbd="./devbuild && ./deploy"
+
 # Git aliases
 function git_current_branch() {
 	git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///'
