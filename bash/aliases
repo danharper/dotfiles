@@ -36,7 +36,7 @@ alias gpl="git pull --rebase"
 alias gup='git fetch origin && grb origin/$(git_current_branch)' # gup instead of gpl
 alias gd='git diff | subl -n'
 alias gk="gitk --all"
-alias gl="git log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'"
+alias gl="git log --graph --pretty=format':%C(yellow)%h%Cgreen%d%Creset %s %C(white) %an, %ar%Creset'"
 alias glo="git log --oneline"
 function gblame() { git blame $1 | subl -n -w; }
 
