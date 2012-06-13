@@ -89,9 +89,9 @@ alias a2r="sudo /usr/sbin/apachectl restart"
 # MySQL
 function mysql() {
 	if [ $# -eq 0 ]; then
-		/usr/local/mysql/bin/mysql -u root
+		/usr/local/Cellar/mysql/5.5.25/bin/mysql -u root
 	else
-		sudo /usr/local/mysql/support-files/mysql.server $@
+		/usr/local/Cellar/mysql/5.5.25/bin/mysql.server $@
 	fi
 }
 
