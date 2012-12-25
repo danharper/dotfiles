@@ -15,8 +15,8 @@ nnoremap j gj
 nnoremap k gk
 
 syntax on
-set background=dark
-" set background=light
+" set background=dark
+set background=light
 " colorscheme solarized
 colorscheme molokai
 

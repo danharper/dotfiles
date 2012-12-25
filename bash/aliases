@@ -68,12 +68,12 @@ alias na="nanoc aco"
 alias nc="nanoc co"
 
 # Jumplist aliases
-alias jl="jump list"
-alias ja="jump add"
-alias jd="jump delete"
+alias jl="jump --list"
+alias ja="jump --add"
+alias jd="jump --del"
 function j() {
 	if [ $# -eq 0 ]; then
-		jump list
+		jump --list
 	else
 		jump $@
 	fi
@@ -113,8 +113,19 @@ alias hidelibrary="chflags hidden ~/Library/"
 # Fix VirtualBox Error
 alias fixvirtualbox="sudo /Library/StartupItems/VirtualBox/VirtualBox restart"
 
-# BitCoin client connections
-alias bitcoin="/Applications/Bitcoin.app/Contents/MacOS/bitcoin -addnode=69.164.218.197 -addnode=64.22.103.150 -addnode=173.242.112.53 -addnode=178.79.147.99 -addnode=184.106.111.41 -addnode=91.85.220.84 -addnode=173.224.125.222"
-
 # Tail Today's FuelPHP App Log
 alias fuellog="tail -f fuel/app/logs/"`eval date +%Y`"/"`eval date +%m`"/"`eval date +%d`".php"
+
+function unblockuson() {
+	sudo networksetup -setdnsservers "Wi-Fi" 208.122.23.22 208.122.23.23
+	sudo networksetup -setairportpower "en1" "off"
+	sudo networksetup -setairportpower "en1" "on"
+	echo "Unblock-Us: ENABLED"
+}
+
+function unblockusoff() {
+	sudo networksetup -setdnsservers "Wi-Fi" "empty"
+	sudo networksetup -setairportpower "en1" "off"
+	sudo networksetup -setairportpower "en1" "on"
+	echo "Unblock-Us: DISABLED"
+}
