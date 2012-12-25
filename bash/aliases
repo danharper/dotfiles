@@ -30,7 +30,6 @@ alias grb='git rebase -p'
 # alias gps="git push"
 alias gpsall='git push'
 alias gps='git push origin HEAD:$(git_current_branch)'
-alias gfog='git push fog HEAD:master'
 # alias gpl="git pull"
 alias gpl="git pull --rebase"
 alias gup='git fetch origin && grb origin/$(git_current_branch)' # gup instead of gpl
@@ -41,29 +40,27 @@ alias glo="git log --oneline"
 function gblame() { git blame $1 | subl -n -w; }
 
 # mkdir and cd into it
-function take() { mkdir $1; cd $1; }
-alias tk="take"
+function tk() { mkdir $1; cd $1; }
 
 # Editor aliases 
-alias m="mate"
-alias m.="mate ."
 alias v="mvim"
 alias v.="mvim ."
 alias s="subl"
 alias s.="subl ."
 
-alias unixtime="date +%s"
+function unixtime() {
+	date +%s && date +%s | pbcopy
+}
 
 # Important directory shortcuts
 alias ht="cd /Library/WebServer/Sites/"
 alias hm="cd ~"
-alias site="cd ~/Ruby/danharper.me/"
 alias dot="cd ~/.bin/dotfiles/"
 
 # bashrc & vimrc
 alias reload="source ~/.bashrc"
 alias ea="subl -n -w ~/.bin/dotfiles/bash/aliases && reload"
-alias hosts="sudo subl -n /etc/hosts"
+alias hosts="subl -n /etc/hosts"
 alias vimrc="mvim ~/.bin/dotfiles/vimrc"
 
 # nanoc aliases
