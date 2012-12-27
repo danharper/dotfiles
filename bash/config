@@ -41,8 +41,20 @@ BMAGENTA='\e[45m'
 BCYAN='\e[46m'
 BWHITE='\e[47m'
 
-#PS1="\n\u:\w \[$EGREEN\]\$(vcprompt)\[$NO_COLOR\] \n→ "
-#PS1="\w \[$UGREEN\]\$(vcprompt --format \"%s:%b\")\[$NO_COLOR\] \[$EYELLOW\]\$(vcprompt --format \"%m%u\")\[$NO_COLOR\] → "
-# PS1="\w \[$EBLACK\]\$(vcprompt --format \"[%s:%b]\[$EGREEN\]%u\[$ECYAN\]%m \")\[$NO_COLOR\]→ "
-# PS1="\w \[$BLUE\][$(git_current_branch)]\[$NO_COLOR\]→ "
-PS1="\w → "
+
+# pwd
+#PS1="\w → "
+
+
+# Set either to blank to disable
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=
+
+# pwd  __SPACE__  Git Branch & Status
+#PS1="\[$EBLACK\]\W \[$BLUE\][\$(__git_ps1 "%s")]\[$NO_COLOR\]→ "
+
+# Last Return Code  _SPACE_  Current Dir Name  __SPACE__  Git Branch & Status
+#PS1='`if [ $? = 0 ]; then echo "\[\033[0;32m\]✔"; else echo "\[\033[01;31m\]✘"; fi` \[\033[01;30m\]\W\[\033[01;34m\] \[\033[0;34m\]$(__git_ps1 "[%s]")\[\033[00m\]→ '
+
+# Current Dir Name  _SPACE_  Last Return Code  _SPACE_  Git Branch & Status
+PS1='\[\033[01;30m\]\W\[\033[01;34m\] `if [ $? = 0 ]; then echo "\[\033[0;32m\]✔"; else echo "\[\033[01;31m\]✘"; fi` \[\033[0;34m\]$(__git_ps1 "[%s]")\[\033[00m\]→ '
