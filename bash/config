@@ -48,7 +48,8 @@ BWHITE='\e[47m'
 
 # Set either to blank to disable
 export GIT_PS1_SHOWDIRTYSTATE=1
-export GIT_PS1_SHOWUNTRACKEDFILES=
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWUPSTREAM="auto"
 
 # pwd  __SPACE__  Git Branch & Status
 #PS1="\[$EBLACK\]\W \[$BLUE\][\$(__git_ps1 "%s")]\[$NO_COLOR\]→ "
