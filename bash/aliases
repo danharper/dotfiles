@@ -23,6 +23,7 @@ alias g="git status -sb"
 alias gb="git branch"
 alias gco="git checkout"
 alias ga="git add"
+alias gaa="git add -A"
 alias gap="git add -p"
 alias gc="git commit -v"
 alias gm="git merge --no-ff"
@@ -34,6 +35,7 @@ alias gps='git push origin HEAD:$(git_current_branch)'
 alias gpl="git pull --rebase"
 alias gup='git fetch origin && grb origin/$(git_current_branch)' # gup instead of gpl
 alias gd='git diff | subl -n'
+alias gdc='git diff --cached | subl -n'
 alias gk="gitk --all"
 alias gl="git log --graph --pretty=format':%C(red)%h%Cgreen%d%Creset %s %C(blue) %an, %ar%Creset'"
 alias glo="git log --oneline"
