@@ -4,6 +4,10 @@ export PATH=$PATH:/usr/local/lib/node
 export PATH=$PATH:/usr/local/share/npm/bin
 export PATH=$PATH:~/.pear/bin
 #export PATH=$PATH:/usr/local/opt/php53/bin/
+export PATH=$PATH:/Applications/eclipse/android-sdk-macosx/platform-tools
+export PATH=$PATH:/Applications/eclipse/android-sdk-macosx/tools
+
+source `brew --prefix`/etc/profile.d/z.sh
 
 # Vi mode in my Terminal? YES FUCKING PLEASE!!
 set -o vi

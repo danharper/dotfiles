@@ -17,15 +17,15 @@ nnoremap k gk
 syntax on
 " set background=dark
 set background=light
-" colorscheme solarized
-colorscheme molokai
+colorscheme solarized
+" colorscheme molokai
 
 " Use pathogen to manage plugins
 call pathogen#infect()
 
 set ruler
-" set number
-set relativenumber " Line numbers relative to your position
+set number
+" set relativenumber " Line numbers relative to your position
 "set cursorline
 set incsearch " Search for text as you enter it
 " set tabstop=2
