@@ -41,6 +41,8 @@ alias gl="git log --graph --pretty=format':%C(red)%h%Cgreen%d%Creset %s %C(blue)
 alias glo="git log --oneline"
 function gblame() { git blame $1 | subl -n -w; }
 
+alias groot="`echo git root` && cd `git root`"
+
 # mkdir and cd into it
 function tk() { mkdir $1; cd $1; }
 
