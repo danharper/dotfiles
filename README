@@ -1,1 +1,9 @@
 There's no place like home. These dot files will follow me everywhere.
+
+ln -s ~/.bin/dotfiles/gitconfig ~/.gitconfig
+ln -s ~/.bin/dotfiles/bashrc ~/.bashrc
+ln -s ~/.bin/dotfiles/vimrc ~/.vimrc
+ln -s ~/.bin/dotfiles/vim ~/.vim
+ln -s ~/.bin/dotfiles/ssh ~/.ssh
+
+echo "[[ -s ~/.bashrc ]] && source ~/.bashrc" >> ~/.bash_profile
