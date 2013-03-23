@@ -1,25 +1,31 @@
 export EDITOR='subl -n -w'
+set -o vi # Vi mode in my Terminal? YES FUCKING PLEASE!!
+
 export PATH=$PATH:~/.bin
-export PATH=$PATH:/usr/local/lib/node
-export PATH=$PATH:/usr/local/share/npm/bin
-export PATH=$PATH:~/.pear/bin
-#export PATH=$PATH:/usr/local/opt/php53/bin/
-export PATH=$PATH:/Applications/eclipse/android-sdk-macosx/platform-tools
-export PATH=$PATH:/Applications/eclipse/android-sdk-macosx/tools
 
-source `brew --prefix`/etc/profile.d/z.sh
-
-# Vi mode in my Terminal? YES FUCKING PLEASE!!
-set -o vi
-
+# Bash Completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
 	. $(brew --prefix)/etc/bash_completion
 fi
 
+# Z
+source `brew --prefix`/etc/profile.d/z.sh
+
+
 # Ruby Version Manager
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Node
+export PATH=$PATH:/usr/local/lib/node
+export PATH=$PATH:/usr/local/share/npm/bin
+export NODE_PATH=/usr/local/lib/node_modules
+
+# PEAR
+export PATH=$PATH:~/.pear/bin
+
+# Heroku
+export PATH="/usr/local/heroku/bin:$PATH"
 
 # MacPython 2.6
 PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}"
-
-export NODE_PATH=/usr/local/lib/node_modules
