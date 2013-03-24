@@ -58,4 +58,4 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 #PS1='`if [ $? = 0 ]; then echo "\[\033[0;32m\]✔"; else echo "\[\033[01;31m\]✘"; fi` \[\033[01;30m\]\W\[\033[01;34m\] \[\033[0;34m\]$(__git_ps1 "[%s]")\[\033[00m\]→ '
 
 # Current Dir Name  _SPACE_  Last Return Code  _SPACE_  Git Branch & Status
-PS1='\[\033[01;30m\]\W\[\033[01;34m\] `if [ $? = 0 ]; then echo "\[\033[0;32m\]✔"; else echo "\[\033[01;31m\]✘"; fi` \[\033[0;34m\]$(__git_ps1 "[%s]")\[\033[00m\]→ '
+PS1='\[\033[01;33m\]\W\[\033[01;34m\] `if [ $? = 0 ]; then echo "\[\033[0;32m\]✔"; else echo "\[\033[01;31m\]✘"; fi` \[\033[0;34m\]$(__git_ps1 "[%s]")\[\033[00m\]→ '

@@ -1,5 +1,10 @@
 set nocompatible " Vim, not Vi.
 
+" Powerline
+set guifont=PowerlineSymbols\ for\ Powerline
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
+
 " Disable arrow keys *shock* *horror*!
 "inoremap  <up>     <nop>
 "inoremap  <down>   <nop>
