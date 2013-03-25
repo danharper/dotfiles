@@ -1,5 +1,8 @@
 set nocompatible " Vim, not Vi.
 
+" Show 7 lines around the cursor when navigating
+set so=7
+
 " Powerline
 set guifont=PowerlineSymbols\ for\ Powerline
 let g:Powerline_symbols = 'fancy'
@@ -16,8 +19,8 @@ set laststatus=2
 "noremap   <right>  <nop>
 
 syntax on
-set background=dark
-" set background=light
+" set background=dark
+set background=light
 colorscheme solarized
 " colorscheme molokai
 
@@ -26,7 +29,7 @@ call pathogen#infect()
 
 set ruler
 set number
-" set relativenumber " Line numbers relative to your position
+set relativenumber " Line numbers relative to your position
 "set cursorline
 set incsearch " Search for text as you enter it
 " set tabstop=2
@@ -107,6 +110,8 @@ imap <C-BS> <c-w>
 " Run 'SortCSS' to alphabetise all properties
 :command! SortCSS :g#\({\n\)\@<=#.,/}/sort
 
+nnoremap <F2> :vimgrep // fuel/app/classes/**/*.php fuel/app/views/**/*.php<left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left><left>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEY MAPS (mostly from garybernhardt)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -116,11 +121,11 @@ nnoremap k gk
 
 " Open .vimrc file in vsp with ,ev
 " nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
-nnoremap <leader>ev :topleft 40 :split $MYVIMRC<cr>
+nnoremap <leader>ev :topleft 45 :split $MYVIMRC<cr>
 
-" Clear search buffer on return
+" Clear search buffer on leader return
 function! MapCR()
-  nnoremap <cr> :nohlsearch<cr><cr>:<backspace>
+  nnoremap <leader><cr> :nohlsearch<cr>
 endfunction
 call MapCR()
 
@@ -192,7 +197,7 @@ augroup vimrcEx
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
 
   " Indent p tags
-  autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
+  " autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
 
   " Don't syntax highlight markdown because it's often wrong
   autocmd! FileType mkd setlocal syn=off
@@ -226,4 +231,3 @@ function! RenameFile()
     endif
 endfunction
 map <leader>n :call RenameFile()<cr>
-
