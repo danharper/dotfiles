@@ -64,7 +64,7 @@ alias dot="cd ~/.bin/dotfiles/"
 # bashrc & vimrc
 alias reload="source ~/.bashrc"
 alias ea="mvim -f ~/.bin/dotfiles/bash/aliases && reload"
-alias hosts="sudo mvim /etc/hosts"
+alias hosts="sudo subl /etc/hosts"
 alias vimrc="mvim ~/.bin/dotfiles/vimrc"
 
 # nanoc aliases
@@ -90,9 +90,9 @@ alias a2r="sudo /usr/sbin/apachectl restart"
 # MySQL
 function mysql() {
 	if [ $# -eq 0 ]; then
-		/usr/local/Cellar/mysql/5.5.25/bin/mysql -u root
+		/usr/local/Cellar/mysql/5.6.10/bin/mysql -u root
 	else
-		/usr/local/Cellar/mysql/5.5.25/bin/mysql.server $@
+		/usr/local/Cellar/mysql/5.6.10/bin/mysql.server $@
 	fi
 }
 
