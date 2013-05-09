@@ -70,7 +70,7 @@ alias dot="cd ~/.bin/dotfiles/"
 # bashrc & vimrc
 alias reload="source ~/.bashrc"
 alias ea="subl -n -w ~/.bin/dotfiles/bash/aliases && reload"
-alias hosts="subl -n /etc/hosts"
+alias hosts="sudo vim /etc/hosts"
 alias vimrc="mvim ~/.bin/dotfiles/vimrc"
 
 # nanoc aliases
