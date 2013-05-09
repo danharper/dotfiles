@@ -124,7 +124,15 @@ alias hidelibrary="chflags hidden ~/Library/"
 alias fixvirtualbox="sudo /Library/StartupItems/VirtualBox/VirtualBox restart"
 
 # Tail Today's FuelPHP App Log
-alias fuellog="tail -f fuel/app/logs/"`eval date +%Y`"/"`eval date +%m`"/"`eval date +%d`".php"
+function fuellog() {
+	base="fuel/app/logs/"`eval date +%Y`"/"`eval date +%m`"/"`eval date +%d`".php"
+	if [ $# -eq 0 ]; then
+		tail -f $base
+	else
+		search="> $@"
+		tail -f $base | grep --line-buffered "$search"
+	fi
+}
 
 function unblockuson() {
 	sudo networksetup -setdnsservers "Wi-Fi" 208.122.23.22 208.122.23.23
