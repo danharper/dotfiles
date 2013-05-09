@@ -15,11 +15,17 @@ alias ll="ls -AFhl"
 alias dbd="./devbuild && ./deploy"
 
 # Git aliases
+function g {
+	if [[ $# -eq 0 ]]; then
+		git status -sb
+	else
+		git $@
+	fi
+}
 function git_current_branch() {
 	git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///'
 }
 alias gs="git status"
-alias g="git status -sb"
 alias gb="git branch"
 alias gco="git checkout"
 alias ga="git add"
