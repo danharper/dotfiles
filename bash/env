@@ -2,6 +2,7 @@ export EDITOR='subl -n -w'
 set -o vi # Vi mode in my Terminal? YES FUCKING PLEASE!!
 
 export PATH=$PATH:~/.bin
+export PATH=$PATH:/usr/local/bin
 
 # PHP 5.4
 export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
