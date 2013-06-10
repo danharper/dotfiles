@@ -4,6 +4,7 @@
 [core]
 	excludesfile = /Users/danharper/.bin/gitignore_global
 	quotepath = false
+	autocrlf = input
 [mergetool]
 	keepBackup = true
 [color]
