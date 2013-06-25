@@ -47,6 +47,8 @@ alias gdc='git diff --cached | subl -n'
 alias gk="gitk --all"
 alias gl="git log --graph --pretty=format':%C(red)%h%Cgreen%d%Creset %s %C(blue) %an, %ar%Creset'"
 alias glo="git log --oneline"
+alias gr="git l -30"
+alias gra="git l --all"
 function gblame() { git blame $1 | subl -n -w; }
 
 alias groot="`echo git root` && cd `git root`"
@@ -137,6 +139,10 @@ function fuellog() {
 		search="> $@"
 		tail -f $base | grep --line-buffered "$search"
 	fi
+}
+
+function laralog() {
+    tail -f "app/storage/logs/log-apache2handler-"`eval date +%Y`"-"`eval date +%m`"-"`eval date +%d`".txt"
 }
 
 function unblockuson() {
