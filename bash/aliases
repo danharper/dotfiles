@@ -145,6 +145,10 @@ function laralog() {
     tail -f "app/storage/logs/log-apache2handler-"`eval date +%Y`"-"`eval date +%m`"-"`eval date +%d`".txt"
 }
 
+function laracli() {
+    tail -f "app/storage/logs/log-cli-"`eval date +%Y`"-"`eval date +%m`"-"`eval date +%d`".txt"
+}
+
 function unblockuson() {
 	sudo networksetup -setdnsservers "Wi-Fi" 208.122.23.22 208.122.23.23
 	sudo networksetup -setairportpower "en1" "off"
