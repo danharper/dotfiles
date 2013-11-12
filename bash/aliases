@@ -96,7 +96,8 @@ function j() {
 
 # Apache
 alias apache="sudo /usr/sbin/apachectl"
-alias a2r="sudo /usr/sbin/apachectl restart"
+alias a2r="sudo /usr/sbin/httpd -k restart"
+alias httpd="sudo /usr/sbin/httpd"
 
 # MySQL
 function mysql() {
