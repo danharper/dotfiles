@@ -71,6 +71,15 @@ alias ht="cd /Library/WebServer/Sites/"
 alias hm="cd ~"
 alias dot="cd ~/.bin/dotfiles/"
 
+# Interactive Shells
+function b() {
+	if [[ -e artisan ]]; then
+		php artisan tinker
+	else
+		boris
+	fi
+}
+
 # bashrc & vimrc
 alias reload="source ~/.bashrc"
 alias ea="subl -n -w ~/.bin/dotfiles/bash/aliases && reload"
