@@ -207,3 +207,6 @@ function gitexport(){
 
 alias stfu="osascript -e 'set volume output muted true'"
 
+alias noise="play -q -c 2 -n synth brownnoise band -n 1600 1500 tremolo .1 30"
+
+alias resetphpstormtrial="rm -rf ~/Library/Preferences/WebIde70"

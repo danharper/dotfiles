@@ -26,3 +26,6 @@
 	ra = !git r --all
 	l = "!. ~/.bin/dotfiles/githelpers && pretty_git_log"
 	la = !git l --all
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
