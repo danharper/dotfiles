@@ -14,7 +14,7 @@ alias ll="ls -AFhl"
 # Build InventoryBase from develop branch and deploy that shit
 alias dbd="./devbuild && ./deploy"
 
-. ./aliases-git
+. ~/.bin/dotfiles/bash/aliases-git
 
 # mkdir and cd into it
 function tk() { mkdir $1; cd $1; }
