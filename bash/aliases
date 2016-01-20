@@ -1,17 +1,16 @@
 # Easier navigation
 alias ..="cd .."
 alias ...="cd ../.."
+alias ....="cd ../../.."
 alias bk="cd -"
 
 # Improved listing
 alias ls="ls -F"
 alias l="ls"
 alias la="ls -AF"
-alias a="la"
 alias lo="ls -AF1"
 alias ll="ls -AFhl"
 
-# Build InventoryBase from develop branch and deploy that shit
 alias dbd="./devbuild && ./deploy"
 
 . ~/.bin/dotfiles/bash/aliases-git
@@ -39,7 +38,7 @@ function b() {
 	if [[ -e artisan ]]; then
 		php artisan tinker
 	else
-		boris
+		psysh
 	fi
 }
 
@@ -49,10 +48,6 @@ alias ea="subl -n -w ~/.bin/dotfiles/bash/aliases && reload"
 alias hosts="sudo vim /etc/hosts"
 alias vhosts="sudo vim /private/etc/apache2/extra/httpd-vhosts.conf"
 alias vimrc="mvim ~/.bin/dotfiles/vimrc"
-
-# nanoc aliases
-alias na="nanoc aco"
-alias nc="nanoc co"
 
 # Jumplist aliases
 alias jl="jump --list"
@@ -71,16 +66,16 @@ alias apache="sudo /usr/sbin/apachectl"
 alias a2r="sudo /usr/sbin/httpd -k restart"
 alias httpd="sudo /usr/sbin/httpd"
 
+alias a="./artisan"
+
 # MySQL
 function mysql() {
 	if [ $# -eq 0 ]; then
-		/usr/local/Cellar/mysql/5.6.10/bin/mysql -u root
+		/usr/local/bin/mysql -u root
 	else
-		/usr/local/Cellar/mysql/5.6.10/bin/mysql.server $@
+		/usr/local/bin/mysql.server $@
 	fi
 }
-
-alias ibdb="/usr/local/Cellar/mysql/5.6.10/bin/mysql -u root inventorybase"
 
 # Restart wireless
 alias resetip="sudo ipconfig set en1 BOOTP; sudo ipconfig set en1 DHCP"
@@ -172,9 +167,12 @@ alias stfu="osascript -e 'set volume output muted true'"
 
 alias noise="play -q -c 2 -n synth brownnoise band -n 1600 1500 tremolo .1 30"
 
-alias resetphpstormtrial="rm -rf ~/Library/Preferences/WebIde70"
-
 # Vagrant
 alias vu="vagrant up"
 alias vd="vagrant halt"
 alias vs="vagrant ssh"
+
+function fhist() {
+    $(history | cut -c8- | sort -u | pick)
+}
+

@@ -2,9 +2,10 @@
 	name = Dan Harper
 	email = intouch@danharper.me
 [core]
-	excludesfile = /Users/danharper/.bin/gitignore_global
+	excludesfile = /Users/danharper/.gitignore_global
 	quotepath = false
 	autocrlf = input
+	editor = vim
 [mergetool]
 	keepBackup = true
 [color]

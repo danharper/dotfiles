@@ -1,3 +1,10 @@
+#. /usr/local/etc/bash_completion.d/adb-completion.bash
+. /usr/local/etc/bash_completion.d/git-completion.bash
+. /usr/local/etc/bash_completion.d/hub.bash_completion.sh
+#. /usr/local/etc/bash_completion.d/lein-completion.bash
+#. /usr/local/etc/bash_completion.d/npm # makes boot slow as fuck!
+. /usr/local/etc/bash_completion.d/nvm
+
 # TerminalColors SIMBL bundle
 export CLICOLOR=1
 

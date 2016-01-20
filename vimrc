@@ -19,10 +19,10 @@ set laststatus=2
 "noremap   <right>  <nop>
 
 syntax on
-" set background=dark
-set background=light
-colorscheme solarized
-" colorscheme molokai
+set background=dark
+"set background=light
+"colorscheme solarized
+colorscheme molokai
 
 " Use pathogen to manage plugins
 call pathogen#infect()
