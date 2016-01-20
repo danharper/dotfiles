@@ -67,6 +67,7 @@ alias a2r="sudo /usr/sbin/httpd -k restart"
 alias httpd="sudo /usr/sbin/httpd"
 
 alias a="./artisan"
+alias pu="./vendor/bin/phpunit"
 
 # MySQL
 function mysql() {
