@@ -6,6 +6,7 @@
 	quotepath = false
 	autocrlf = input
 	editor = vim
+	pager = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
 [mergetool]
 	keepBackup = true
 [color]
