@@ -4,7 +4,7 @@ set nocompatible " Vim, not Vi.
 set so=7
 
 " Powerline
-set guifont=PowerlineSymbols\ for\ Powerline
+"set guifont=PowerlineSymbols\ for\ Powerline
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
 
@@ -37,7 +37,7 @@ set incsearch " Search for text as you enter it
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set guifont=Consolas:h12
+set guifont="Source Code Pro":h14
 set smartindent
 set autoindent
 set splitbelow " Split windows below current window
