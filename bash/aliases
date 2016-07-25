@@ -111,20 +111,10 @@ function fuellog() {
 }
 
 function laralog() {
-    tail -f "app/storage/logs/log-apache2handler-"`eval date +%Y`"-"`eval date +%m`"-"`eval date +%d`".txt"
+    tail -f "storage/logs/laravel.log"
 }
 
-function laracli() {
-    tail -f "app/storage/logs/log-cli-"`eval date +%Y`"-"`eval date +%m`"-"`eval date +%d`".txt"
-}
-
-function lara() {
-    type=${1-"apache2"}
-	if [ $type = "apache2" ]; then
-        type="apache2handler"
-    fi
-    tail -f "app/storage/logs/log-"$type"-"`eval date +%Y`"-"`eval date +%m`"-"`eval date +%d`".txt"
-}
+alias llog="laralog"
 
 function unblockuson() {
 	sudo networksetup -setdnsservers "Wi-Fi" 208.122.23.22 208.122.23.23
